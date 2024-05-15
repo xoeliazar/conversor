@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Agregar enlace a la librería Chart.js para generar gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <hr />
+        <h1>Conversor de Monedas Nacional</h1>
+        <hr />
+      </nav>
+      <div class="conversor">
+        <main>
+          <h2>Pesos CLP</h2>
+          <!-- Input para ingresar el monto en pesos chilenos -->
+          <input
+            min="1"
+            id="inputCLP"
+            type="number"
+            placeholder="Ingrese el monto en CLP"
+          />
+          <p id="mensaje"></p>
+          <h4>Moneda a convertir:</h4>
+          <!-- Select para elegir la moneda a la que se desea convertir -->
+          <select name="" id="moneda">
+            <option disabled selected value="">MONEDAS</option>
+            <option value="dolar" id="dolar">DOLAR</option>
+            <option value="euro" id="euro">EURO</option>
+          </select>
+          <p id="mensaje2"></p>
+          <!-- Botón para iniciar el proceso de consulta y renderización de datos -->
+          <button id="btn">Buscar</button>
+          <!-- mostrar el resultado de la conversión -->
+          <p id="resultado">...</p>
+        </main>
+      </div>
+      <span id="errorCatch"></span>
+      <section>
+        <!-- Canvas para mostrar el gráfico de la moneda seleccionada -->
+        <canvas id="grafico"></canvas>
+      </section>
+    </div>
+    <!-- Enlazar el archivo JavaScript -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
